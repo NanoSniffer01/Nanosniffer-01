@@ -1,0 +1,4 @@
+sed -i '' 's/<Link to={`\/entities\/${entity.id}`} className="flex items-center px-3 py-1.5 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-xs font-medium rounded hover:bg-gray-800 dark:hover:bg-white transition-colors shadow-sm">\n                    <ExternalLink className="w-3.5 h-3.5 mr-1.5" \/> Full Page\n                  <\/Link>//g' src/pages/Entities/index.tsx
+
+sed -i '' 's/<FileText className="w-3.5 h-3.5 mr-1" \/> PDF Dossier\n                  <\/button>/<FileText className="w-3.5 h-3.5 mr-1" \/> PDF Dossier\n                  <\/button>\n                  <Link to={`\/entities\/${entity.id}`} className="flex items-center text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">\n                    <ExternalLink className="w-3.5 h-3.5 mr-1" \/> Full Page\n                  <\/Link>/g' src/pages/Entities/index.tsx
+

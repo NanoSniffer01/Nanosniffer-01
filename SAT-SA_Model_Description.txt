@@ -1,0 +1,36 @@
+Supervisory Analytics Tool for SOC Assessment (SAT-SA)
+
+Overview
+The SAT-SA (Supervisory Analytics Tool for SOC Assessment) is a modern, high-performance web application designed for comprehensive cybersecurity supervision. It acts as a centralized dashboard to monitor, assess, and evaluate the security posture, alert frequencies, and execution gaps across various Critical Sector Entities (CSEs).
+
+Technology Stack
+- Core Framework: React 18 (with TypeScript)
+- Build Tool: Vite
+- Routing: React HashRouter 
+- Styling: Tailwind CSS
+- Data Visualization: Recharts 
+- Icons: Lucide React
+- PDF Generation: jsPDF 
+- API Client: Axios 
+
+Core Features & Architecture
+
+1. Advanced Analytics Dashboard 
+- KPI Tracking: Real-time metrics tracking Critical Alerts, Escalation Rates, and Active Execution Gaps.
+- Visualizations: Risk Distribution donut charts, Findings by Category bar charts, and Alert Trends area charts.
+
+2. CSE Entity Management
+- Off-Canvas Drawer Integration: Clicking on an entity opens a slide-out drawer containing a complete "mini-dossier" without losing context of the main table.
+- Dynamic Risk Badging & Filtering: Color-coded risk badges and granular sector filtering.
+
+3. Execution Gap Tracking
+- Comprehensive tracking of identified security vulnerabilities and execution failures (Negative Space).
+
+4. Dynamic Report Generation
+- Client-Side PDF Exports: Users can generate comprehensive, multi-page PDF dossiers (e.g., "Execution Gap Reports") directly in the browser.
+
+Backend API Integration Strategy
+- Graceful Fallbacks: Every API call is wrapped in a try/catch block. If the request fails due to server downtime, the service instantly returns the local static prototype data. This guarantees the UI never crashes.
+
+Real-Time API Status Monitoring
+- The global application header features a persistent API Status indicator that polls the backend every 30 seconds and switches between "Live API" (Green) and "Mock Data Mode" (Red).

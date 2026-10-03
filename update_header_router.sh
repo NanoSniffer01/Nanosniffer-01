@@ -1,0 +1,10 @@
+sed -i '' 's/import { useLocation } from '"'"'react-router-dom'"'"';/import { useLocation, useNavigate } from '"'"'react-router-dom'"'"';/g' src/components/layout/Header.tsx
+
+sed -i '' 's/const location = useLocation();/const location = useLocation();\n  const navigate = useNavigate();/g' src/components/layout/Header.tsx
+
+sed -i '' 's/setShowProfile(false);\n      }/}/g' src/components/layout/Header.tsx
+
+sed -i '' 's/<div className="px-4 py-2 hover:bg-gray-50 dark:hover:bg-dark-border cursor-pointer" onClick={() => { setShowSearchResults(false); setSearchQuery(""); }}>\n                  <div className="text-sm font-medium text-blue-600 dark:text-blue-400">Entity: Metro Water Works<\/div>\n                  <div className="text-xs text-gray-500">Critical Sector Entity<\/div>\n                <\/div>/<div className="px-4 py-2 hover:bg-gray-50 dark:hover:bg-dark-border cursor-pointer" onClick={() => { setShowSearchResults(false); setSearchQuery(""); navigate("\/entities\/ent-101"); }}>\n                  <div className="text-sm font-medium text-blue-600 dark:text-blue-400">Entity: Metro Water Works<\/div>\n                  <div className="text-xs text-gray-500">Critical Sector Entity<\/div>\n                <\/div>/g' src/components/layout/Header.tsx
+
+sed -i '' 's/<div className="px-4 py-2 hover:bg-gray-50 dark:hover:bg-dark-border cursor-pointer" onClick={() => { setShowSearchResults(false); setSearchQuery(""); }}>\n                  <div className="text-sm font-medium text-blue-600 dark:text-blue-400">Finding: Inadequate Log Retention<\/div>\n                  <div className="text-xs text-gray-500">Execution Gap • High Severity<\/div>\n                <\/div>/<div className="px-4 py-2 hover:bg-gray-50 dark:hover:bg-dark-border cursor-pointer" onClick={() => { setShowSearchResults(false); setSearchQuery(""); navigate("\/findings\/fnd-982"); }}>\n                  <div className="text-sm font-medium text-blue-600 dark:text-blue-400">Finding: Inadequate Log Retention<\/div>\n                  <div className="text-xs text-gray-500">Execution Gap • High Severity<\/div>\n                <\/div>/g' src/components/layout/Header.tsx
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SIH Submission - SAT-SA</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px; }
+        h1 { color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; }
+        h2 { color: #2563eb; margin-top: 30px; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .highlight { background: #f3f4f6; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; }
+    </style>
+</head>
+<body>
+    <h1>Supervisory Analytics Tool for SOC Assessment (SAT-SA)</h1>
+    <p><em>Smart India Hackathon (SIH) Portal Submission Document</em></p>
+
+    <h2>1. Problem Statement / Domain</h2>
+    <div class="highlight">
+        <p><strong>Domain:</strong> Cybersecurity / NCIIPC</p>
+        <p><strong>Challenge:</strong> Monitoring and assessing the security posture, operational efficiency, and execution gaps of Security Operations Centers (SOCs) across multiple Critical Sector Entities (CSEs) is highly fragmented. Supervisors lack a centralized, real-time analytics platform to benchmark entities, prioritize critical alerts, and enforce compliance dynamically.</p>
+    </div>
+
+    <h2>2. Proposed Solution / Idea</h2>
+    <p>We propose <strong>SAT-SA</strong>—a centralized, high-performance web dashboard designed specifically for cybersecurity supervisors. </p>
+    <p>SAT-SA acts as a single pane of glass that ingests data from various SOCs across critical sectors (Energy, Finance, Healthcare). It instantly processes this data to generate risk distributions, highlight architectural execution gaps, and provide real-time benchmarking between entities. By leveraging an intuitive, data-driven UI, supervisors can rapidly identify vulnerabilities, track escalation rates, and generate automated compliance dossiers.</p>
+
+    <h2>3. Key Features & Methodology</h2>
+    <ul>
+        <li><strong>Real-Time Analytics Dashboard:</strong> Interactive data visualizations (Donut, Area, and Bar charts) that track critical alerts, findings by category, and risk distribution across all supervised entities.</li>
+        <li><strong>Entity Risk Profiling & Drawers:</strong> A highly interactive entity management system. Supervisors can click on any CSE to open a "mini-dossier" drawer containing immediate risk badges and recent findings without losing context of the global table.</li>
+        <li><strong>Execution Gap Tracking:</strong> A dedicated module to track "Negative Space" and execution failures, categorizing them by severity (High, Critical, Low) and confidence scores.</li>
+        <li><strong>Automated PDF Report Generation:</strong> Built-in client-side engine to instantly generate and download multi-page, confidential PDF reports (e.g., "Execution Gap Report") for offline auditing and executive briefings.</li>
+        <li><strong>Resilient API Architecture:</strong> A fault-tolerant service layer that features a "Graceful Fallback Mode" ensuring the dashboard remains operational during backend downtimes.</li>
+    </ul>
+
+    <h2>4. Technology Stack</h2>
+    <ul>
+        <li><strong>Frontend:</strong> React.js 18, TypeScript, Vite</li>
+        <li><strong>UI & Styling:</strong> Tailwind CSS, Lucide Icons</li>
+        <li><strong>Data Visualization:</strong> Recharts (D3.js based)</li>
+        <li><strong>Reporting & Export:</strong> jsPDF</li>
+        <li><strong>API & Networking:</strong> Axios, RESTful API</li>
+        <li><strong>Backend:</strong> Python / FastAPI (REST API)</li>
+    </ul>
+
+    <h2>5. Use Cases & Target Audience</h2>
+    <ul>
+        <li><strong>Target Audience:</strong> National Cyber Security Supervisors, NCIIPC Auditors, CISOs, and SOC Managers.</li>
+        <li><strong>Use Case 1 (Benchmarking):</strong> A supervisor wants to compare the incident response time of the Finance sector against the Energy sector to identify systemic weaknesses.</li>
+        <li><strong>Use Case 2 (Auditing):</strong> An auditor requires an immediate physical report of all "Critical" execution gaps discovered in the last 30 days to present to stakeholders. SAT-SA generates this PDF in one click.</li>
+    </ul>
+
+    <h2>6. Unique Selling Proposition (USP)</h2>
+    <p>Unlike traditional, clunky log-management tools, <strong>SAT-SA</strong> focuses purely on <em>Supervisory Analytics</em>. It abstracts away raw terminal data and transforms it into actionable, executive-level insights. Its resilient API design ensures 100% uptime for supervisors, while the zero-latency frontend provides an unparalleled, frictionless user experience for critical decision-making.</p>
+</body>
+</html>

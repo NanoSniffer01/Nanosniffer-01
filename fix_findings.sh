@@ -1,0 +1,1 @@
+sed -i '' 's/  useEffect(() => {/  const [findingsData, setFindingsData] = useState<any[]>([]);\n\n  useEffect(() => {\n    const fetchData = async () => {\n      const findings = await FindingsService.getFindings();\n      setFindingsData(findings);\n    };\n    fetchData();\n  }, []);\n\n  \/\/ useEffect(() => {/g' src/pages/Findings/index.tsx

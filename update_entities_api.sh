@@ -1,0 +1,4 @@
+sed -i '' 's/import { entitiesData, findingsData } from '"'"'@\/data'"'"';/import { EntityService, FindingsService } from '"'"'@\/services\/api'"'"';\nimport { CSEEntity, Finding } from '"'"'@\/types'"'"';/g' src/pages/Entities/index.tsx
+
+sed -i '' 's/export const Entities = () => {/export const Entities = () => {\n  const [entitiesData, setEntitiesData] = useState<CSEEntity[]>([]);\n  const [findingsData, setFindingsData] = useState<Finding[]>([]);\n  const [isLoading, setIsLoading] = useState(true);\n\n  useEffect(() => {\n    const fetchData = async () => {\n      setIsLoading(true);\n      const [entities, findings] = await Promise.all([\n        EntityService.getEntities(),\n        FindingsService.getFindings()\n      ]);\n      setEntitiesData(entities);\n      setFindingsData(findings);\n      setIsLoading(false);\n    };\n    fetchData();\n  }, []);\n/g' src/pages/Entities/index.tsx
+
